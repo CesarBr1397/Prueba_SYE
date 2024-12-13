@@ -1,0 +1,47 @@
+@model IEnumerable<Entidad.Models.EnfermedadCronica>
+
+@{
+    ViewData["Title"] = "Enfermedades Crónicas";
+}
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Lista de Enfermedades Crónicas</h2>
+
+<a class="btn btn-primary" href="/EnfermedadCronica/Agregar">Agregar</a>
+<br>
+
+<table class="table table-bordered border-primary">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Descripcion</th>
+            <th>Fecha de registro</th>
+            <th>Fecha de inicio</th>
+
+            <th>Fecha de actualizacion</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.id_enf_cronica)</td>
+                <td>@Html.DisplayFor(modelItem => item.nombre)</td>
+                <td>@Html.DisplayFor(modelItem => item.descripcion)</td>
+                <td>@Html.DisplayFor(modelItem => item.fecha_registro)</td>
+                <td>@Html.DisplayFor(modelItem => item.fecha_inicio)</td>
+                <td>@Html.DisplayFor(modelItem => item.fecha_actualizacion)</td>
+                <td>
+                    @Html.ActionLink("Editar", "Actualizar", new { id = item.id_enf_cronica }) |
+                    @Html.ActionLink("Detalles", "Details", new { id = item.id_enf_cronica }) |
+                    @Html.ActionLink("Eliminar", "Delete", new { id = item.id_enf_cronica })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

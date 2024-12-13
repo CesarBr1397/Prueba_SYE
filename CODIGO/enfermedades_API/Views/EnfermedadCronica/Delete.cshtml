@@ -1,0 +1,51 @@
+@model Entidad.Models.EnfermedadCronica
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Eliminar Enfermedad Crónica</h1>
+
+<div class="card">
+    <div class="card-header">
+        <h2>¿Estás seguro de que deseas eliminar esta enfermedad?</h2>
+    </div>
+    <div class="card-body">
+        <form action="/EnfermedadCronica/Delete" method="post">
+            <!-- Campo oculto: ID -->
+            <input type="hidden" name="id_enf_cronica" value="@Model.id_enf_cronica" />
+
+            <div class="form-group mb-3">
+                <label for="nombre">Nombre:</label>
+                <input value="@Model.nombre" type="text" name="nombre" class="form-control" readonly />
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="descripcion">Descripción:</label>
+                <textarea name="descripcion" class="form-control" rows="3" readonly>@Model.descripcion</textarea>
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="fecha_registro">Fecha de Registro:</label>
+                <input type="date" value="@Model.fecha_registro.ToString("yyyy-MM-dd")" class="form-control" readonly />
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="fecha_inicio">Fecha de Inicio:</label>
+                <input type="date" value="@Model.fecha_inicio.ToString("yyyy-MM-dd")" class="form-control" readonly />
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="fecha_actualizacion">Fecha de Actualización:</label>
+                <input type="date" value="@Model.fecha_actualizacion.ToString("yyyy-MM-dd")" class="form-control" readonly />
+            </div>
+
+            <!-- Campo oculto: Estado -->
+            <input type="hidden" name="estado" value="@(Model.estado ? "true" : "false")" />
+
+            <!-- Botones -->
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+            <a href="@Url.Action("Index", "EnfermedadCronica")" class="btn btn-secondary">Cancelar</a>
+        </form>
+    </div>
+</div>

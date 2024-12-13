@@ -1,0 +1,50 @@
+@model IEnumerable<Entidad.Models.EnfermedadCronica>
+
+@{
+    ViewData["Title"] = "Enfermedades Crónicas";
+}
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Agregar nuevo registo</h1>
+
+<form action="/EnfermedadCronica/Agregar" method="post">
+    <div>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Ingrese el nombre">
+    </div>
+    <br>
+    <div>
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" name="descripcion" class="form-control" rows="4" placeholder="Ingrese la descripción"></textarea>
+    </div>
+    <br>
+    <div>
+        <label for="fecha_registro">Fecha de Registro:</label>
+        <input type="date" id="fecha_registro" name="fecha_registro" class="form-control" required>
+    </div>
+    <br>
+    <div>
+        <label for="fecha_inicio">Fecha de Inicio:</label>
+        <input type="date" id="fecha_inicio" name="fecha_inicio" class="form-control" required>
+    </div>
+    <br>
+    <div>
+        <label for="fecha_actualizacion">Fecha de Actualización:</label>
+        <input type="date" id="fecha_actualizacion" name="fecha_actualizacion" class="form-control">
+    </div>
+    <br>
+    <div>
+        <select id="estado" name="estado" class="form-select" hidden>
+            <option value="true">Activo</option>
+            <option value="false">Inactivo</option>
+        </select>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <a href="/EnfermedadCronica/Atras" class="btn btn-danger">Atrás</a>
+
+</form>
+

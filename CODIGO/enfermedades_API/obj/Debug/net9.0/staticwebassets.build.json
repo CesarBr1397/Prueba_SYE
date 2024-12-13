@@ -1,0 +1,20 @@
+{
+  "Version": 1,
+  "Hash": "j31YDpwYv3kh/odLnMQG4ugNOMbH71AtgFui610IHw4=",
+  "Source": "enfermedades_API",
+  "BasePath": "_content/enfermedades_API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "enfermedades_API\\wwwroot",
+      "Source": "enfermedades_API",
+      "ContentRoot": "C:\\Users\\mario.briseno\\Desktop\\enfermedades_API\\enfermedades_API\\wwwroot\\",
+      "BasePath": "_content/enfermedades_API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [],
+  "Endpoints": []
+}

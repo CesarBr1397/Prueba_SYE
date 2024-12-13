@@ -1,0 +1,35 @@
+@model Entidad.Models.EnfermedadCronica
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="card">
+    <div class="card-header">
+        <h2>Detalles de Enfermedad</h2>
+    </div>
+    <div class="card-body">
+        <dl class="row">
+
+            <dt class="col-sm-3">Nombre</dt>
+            <dd class="col-sm-9">@Model.nombre</dd>
+
+            <dt class="col-sm-3">Descripción</dt>
+            <dd class="col-sm-9">@Model.descripcion</dd>
+
+            <dt class="col-sm-3">Fecha de Registro</dt>
+            <dd class="col-sm-9">@Model.fecha_registro.ToShortDateString()</dd>
+
+            <dt class="col-sm-3">Fecha de Inicio</dt>
+            <dd class="col-sm-9">@Model.fecha_inicio.ToShortDateString()</dd>
+
+            <dt class="col-sm-3">Última Actualización</dt>
+            <dd class="col-sm-9">@Model.fecha_actualizacion.ToShortDateString()</dd>
+        </dl>
+    </div>
+    <div class="card-footer">
+        <a href="@Url.Action("Index", "EnfermedadCronica")" class="btn btn-primary">Volver</a>
+    </div>
+</div>
