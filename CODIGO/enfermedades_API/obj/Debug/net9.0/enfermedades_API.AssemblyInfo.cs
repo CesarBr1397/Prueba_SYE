@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("enfermedades_API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+949f252f9742693fadf25d8391ed8cc272e25c1f")]
 [assembly: System.Reflection.AssemblyProductAttribute("enfermedades_API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("enfermedades_API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
